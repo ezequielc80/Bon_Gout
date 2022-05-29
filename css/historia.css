@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+/**************** Header *****************/
+header{
+  height: 80px; 
+  background-color: #8B734B;
+  margin:5px 5px 0 5px;
+}
+  
+/*Titulo Logo*/
+.logo_header span{
+  color: black;
+  position: absolute;
+  font-family: 'Gloria Hallelujah', cursive;   
+  font-size: 2em; 
+  font-style: italic;
+  font-weight: 800;
+  padding: 10px 10px 10px 0; 
+} 
+/** Imagen Logo **/
+.logo_header img{
+  margin: 10px;
+}
+    
+/************ Menu Navegacion **************/
+nav{
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  margin: 5px;
+  height: 80px;
+  width: 80%;
+}
+.navegation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  list-style: none;
+  padding: 30px; 
+} 
+  
+/*Elementos Menu de Navegacion*/
+.navegation a {
+  font-size: 1em;
+  font-family: 'Acme', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  margin: 15px 15px 5px 15px;
+}
+/*Mouse Elementos Menu de Navegacion*/
+.navegation a:hover {
+  color:black;
+  border-bottom: 2px black solid; 
+  font-size: 1.1em; 
+  font-weight: bold; 
+}
+  
+
+  
+/******** @Media Header **********/
+@media all and (max-width: 1200px) {
+    .navegation {
+      justify-content: space-around;}
+} 
+@media all and (max-width: 992px) {
+    .navegation {
+      justify-content: space-evenly;}
+} 
+@media all and (max-width: 900px) {
+    .navegation {
+      justify-content:center;}
+} 
+@media all and (max-width: 768px) {
+    .navegation {
+      justify-content:flex-start;
+      padding-left: 0;}
+    .logo_header span{
+      font-size: 1.5em;
+      padding-right: 0;} 
+} 
+@media all and (max-width: 680px) {
+    .navegation {
+      flex-flow: column wrap;
+      padding: 0;
+      margin-left: 30px;}
+    .navegation a {
+        font-size: 0.7em;}
+    .navegation a:hover {
+        font-size: 0.8em;}  
+}
+@media all and (max-width: 320px) {
+    .navegation {
+      flex-flow: column wrap;
+      padding: 0px;
+      margin: 0px;}
+    .navegation a {
+        font-size: 5px;
+        padding: 0;
+        margin: 0;}
+    .navegation a:hover {
+        font-size: 5px;} 
+    .logo_header{
+      margin: 0;
+      padding: 0;}
+    .logo_header span{
+      font-size: 1.2em;
+      padding:20px 0 0 0;
+      margin: 0;}
+    .logo_header img{
+      width:70px;
+      height:40px;
+      padding-top: 10px;}
+}
+  
+/******************* MAIN ********************/
+/* Titulo */
+#nuestra_historia h1{
+  margin:25px 5px 20px 50px;
+  padding-left: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+.container_nuestra_historia{
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 40% 40%;
+  justify-content: center;
+  column-gap: 100px; 
+  row-gap: 80px;
+  margin-left: 5px;
+}
+  
+.cocina1{
+  grid-area: 1 / 1 / span 1 /span 1;
+}
+.cafe1{
+  grid-area: 1 / 2 / span 1 /span 1;
+}
+.cafe2{
+  grid-area: 1 / 3 / span 1 /span 1;
+}
+.cocina2{
+  grid-area: 2 / 1 / span 1 /span 1;
+}
+.historia{
+  grid-area: 2 / 2 / span 1 /span 2;
+}
+
+.cocina1 img, .cocina2 img, .cafe1 img, .cafe2 img {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  border-radius: 10px;
+  }   
+.historia{
+  margin: 0px;
+  padding: 5px;
+}
+
+.historia p{
+  font-size: 1.4em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: justify;
+  line-height: 1.1em; 
+  margin-bottom: 2em;
+}
+
+
+/******** @Media Main **********/
+@media all and (max-width: 900px) {
+  #nuestra_historia h1{
+    margin:25px 5px 20px 20px;
+    padding-left: 5px;
+    font-size: 3em;
+  }
+  .historia p{
+    font-size: 1.2em;
+  }
+  .container_nuestra_historia{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 30% 30% 30%;
+    justify-content: center;
+    column-gap: 30px; 
+    row-gap: 30px;
+    margin: 0 25px 0 25px;
+  }
+  .cafe2{
+    grid-area: 2 / 1 / span 1 /span 1;
+  }
+  .cocina2{
+    grid-area: 2 / 2 / span 1 /span 1;
+  }
+  .historia{
+    grid-area: 3 / 1 / span 1 /span 2;
+  }
+} 
+
+@media all and (max-width: 768px) {
+  #nuestra_historia h1{
+    margin:25px 5px 20px 20px;
+    padding-left: 5px;
+    font-size: 2.5em;
+  }
+  .historia p{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify; 
+    line-height: 1em; 
+    margin-bottom: 2em; 
+  }
+  .container_nuestra_historia{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 25% 25% 25%;
+  }
+  .cafe2{
+    grid-area: 2 / 1 / span 1 /span 1;
+  }
+  .cocina2{
+    grid-area: 2 / 2 / span 1 /span 1;
+  }
+  .historia{
+    grid-area: 3 / 1 / span 1 /span 2;
+  }
+} 
+
+@media all and (max-width: 320px) {
+  #nuestra_historia h1{
+    margin:15px 5px 20px 20px;
+    padding-left: 5px;
+    font-size: 1.5em;
+  }
+  .historia p{
+    font-size: 0.9em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify; 
+    line-height: 1.5em; 
+    margin-bottom: 2em; 
+    margin-top: 2em;
+  }
+  .container_nuestra_historia{
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: 18% 18% 18% 18% 15%;
+    justify-content: center;
+    column-gap: 30px; 
+    row-gap: 30px;
+    margin: 0 0 0 5px; 
+  }
+  .cocina1{
+    grid-area: 1 / 1 / span 1 /span 1;
+  }
+  .cafe1{
+    grid-area: 2 / 1 / span 1 /span 1;
+  }
+  .cafe2{
+    grid-area: 3 / 1 / span 1 /span 1;
+  }
+  .cocina2{
+    grid-area: 4 / 1 / span 1 /span 1;
+  }
+  .historia{
+    grid-area: 5 / 1 / span 1 /span 1;
+  }
+} 
+
+  
+/************** Footer **********************/
+footer{
+  background-color: black;
+  height: 200px;
+  margin: 5px 5px 10px 5px;
+  padding: 15px;
+  border-radius: 8px;
+} 
+  
+/*****Container Footer******/
+.container_footer{
+  display: flex;
+  justify-content:space-around;
+  padding: 5px 50px;
+}
+  
+/********* Div Lista del Sitio ************/
+.site_map{
+  background-color: black;
+}
+.list_site{
+  margin: 15px 5px 5px 5px;
+  list-style: none;
+}
+.list_site li{
+  margin: 10px 10px 10px 0px;
+}
+.list_site a{
+  text-decoration: none; 
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.2em;
+}
+.list_site a:hover{
+  color:#B4965A;
+  font-weight: bold;  
+}
+  
+  
+/******** Div Seccion Trabajar ************/
+.trabajar{
+  background-color: black;
+}
+/*Texto Trabajar*/
+.trabajar p{
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  margin: 5px 0px;
+}
+/*email Trabajar*/
+.trabajar a{
+  text-decoration: none;
+  font-size: 0.9em;
+  color:#B4965A;
+  padding: 5px 10px 5px 0px;
+}
+  
+/********* Div Seccion Contacto ***************/
+.contacto{
+  background-color: black;
+  color: white; 
+  margin: 0px 0px 0px 0px;
+}
+.contacto p{
+  margin: 5px 0px 10px 0px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  color: white;
+}
+.contacto a{
+  text-decoration: none;
+  font-size: 0.9em;
+  color:#B4965A;
+  padding: 15px 10px 5px 0px;
+  margin-top: 10px;
+}
+  
+/******* Iconos RedesSociales **********/
+.redes_sociales i{
+  margin: 20px;
+}
+.redes_sociales a{
+  text-decoration: none;
+}
+  
+  
+/************ @Media Footer *****************/
+@media all and (max-width: 992px) {
+    .container_footer{
+      justify-content:space-between;}
+    .site_map{
+      margin-right:20px;}
+    .list_site a{  
+      font-size: 1.1em;}
+    .trabajar{
+      margin-right:40px;} 
+    .trabajar p{ 
+      font-size: 1.5em;}
+    .contacto{
+      margin-right:50px;
+      margin-left: 0px;} 
+    .contacto p{
+      font-size: 1.5em;}
+}
+@media all and (max-width: 900px) {
+    .container_footer{
+      justify-content:space-evenly;}
+    .site_map{
+      margin-right:20px;}
+    .list_site a{  
+      font-size: 1.1em;}
+    .trabajar{
+      margin-right:40px;} 
+    .trabajar p{ 
+      font-size: 1.4em;}
+    .trabajar a{
+        font-size: 0.8em;}  
+    .contacto{
+      margin-right:50px;
+      margin-left: 0px;} 
+    .contacto p{
+      font-size: 1.4em;}
+    .contacto a{
+      font-size: 0.8em;}  
+    .redes_sociales i{
+      display: block;}
+} 
+@media all and (max-width: 768px) {
+    .container_footer{
+      justify-content:center;}
+    .redes_sociales i{
+      width: 10%;}
+    .site_map{
+      margin-right:10px;}
+    .trabajar{
+     margin-right:20px;} 
+    .contacto{
+      margin-right:40px;}
+} 
+@media all and (max-width: 680px) {
+    .container_footer{
+      justify-content:center;}
+    .site_map{
+      margin-right:5px;}
+    .list_site a{  
+      font-size: 0.9em;}
+    .trabajar{
+      margin-right:5px;} 
+    .trabajar p{ 
+      font-size: 1.2em;}
+    .trabajar a{
+        font-size: 0.7em;}  
+    .contacto{
+      margin-right:5px;
+      margin-left: 0px;} 
+    .contacto p{
+      font-size: 1.2em;}
+    .contacto a{
+      font-size: 0.7em;}  
+    .redes_sociales i{
+      display: block;}
+} 
+@media all and (max-width: 600px) {
+    .container_footer{
+      justify-content:center;}
+    .site_map{
+      margin-right:5px;}
+    .list_site a{  
+      font-size: 1em;}
+    .trabajar{
+      margin-right:5px;} 
+    .trabajar p{ 
+      font-size: 1em;}
+    .trabajar a{
+        font-size: 0.6em;}  
+    .contacto{
+      margin-right:5px;
+      margin-left: 0px;} 
+    .contacto p{
+      font-size: 1em;}
+    .contacto a{
+      font-size: 0.6em;}  
+    .redes_sociales i{
+      display: block;}
+} 
+@media all and (max-width: 320px) {
+    .list_site a{  
+      font-size: 0.8em; }
+    .trabajar p{ 
+      font-size: 0.7em;} 
+    .trabajar a{
+        font-size: 0.6em;}  
+    .contacto p{
+      font-size: 0.7em;} 
+    .contacto a{
+      font-size: 0.6em;}  
+} 
+  
+  
+  
+  
+  

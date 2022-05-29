@@ -1,0 +1,810 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+/**************** Header *****************/
+header{
+  height: 80px; 
+  background-color: #8B734B;
+  margin:5px 5px 0 5px;
+}
+  
+/*Titulo Logo*/
+.logo_header span{
+  color: black;
+  position: absolute;
+  font-family: 'Gloria Hallelujah', cursive;   
+  font-size: 2em; 
+  font-style: italic;
+  font-weight: 800;
+  padding: 10px 10px 10px 0; 
+} 
+/** Imagen Logo **/
+.logo_header img{
+  margin: 10px;
+}
+    
+/************ Menu Navegacion **************/
+nav{
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  margin: 5px;
+  height: 80px;
+  width: 80%;
+}
+.navegation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  list-style: none;
+  padding: 30px; 
+} 
+  
+/*Elementos Menu de Navegacion*/
+.navegation a {
+  font-size: 1em;
+  font-family: 'Acme', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  margin: 15px 15px 5px 15px;
+}
+/*Mouse Elementos Menu de Navegacion*/
+.navegation a:hover {
+  color:black;
+  border-bottom: 2px black solid; 
+  font-size: 1.1em; 
+  font-weight: bold; 
+}  
+
+  
+/******** @Media Header **********/
+@media all and (max-width: 1200px) {
+    .navegation {
+      justify-content: space-around;}
+} 
+@media all and (max-width: 992px) {
+    .navegation {
+      justify-content: space-evenly;}
+} 
+@media all and (max-width: 900px) {
+    .navegation {
+      justify-content:center;}
+} 
+@media all and (max-width: 768px) {
+    .navegation {
+      justify-content:flex-start;
+      padding-left: 0;}
+    .logo_header span{
+      font-size: 1.5em;
+      padding-right: 0;} 
+} 
+@media all and (max-width: 680px) {
+    .navegation {
+      flex-flow: column wrap;
+      padding: 0;
+      margin-left: 30px;}
+    .navegation a {
+        font-size: 0.7em;}
+    .navegation a:hover {
+        font-size: 0.8em;}  
+}
+@media all and (max-width: 320px) {
+    .navegation {
+      flex-flow: column wrap;
+      padding: 0px;
+      margin: 0px;}
+    .navegation a {
+        font-size: 5px;
+        padding: 0;
+        margin: 0;}
+    .navegation a:hover {
+        font-size: 5px;} 
+    .logo_header{
+      margin: 0;
+      padding: 0;}
+    .logo_header span{
+      font-size: 1.2em;
+      padding:20px 0 0 0;
+      margin: 0;}
+    .logo_header img{
+      width:70px;
+      height:40px;
+      padding-top: 10px;}
+}
+
+
+/******************* MAIN ********************/
+/********* Nuestras Sucursales **************/
+/* Titulo */
+#nuestras_sucursales h1{
+    margin:25px 5px 10px 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.container_nuestras_sucursales{
+    display: grid;
+    grid-template-columns: 20% 24% 24% 24%;
+    grid-template-rows: 30% 28% 25% 5%; 
+    justify-content: center;
+    column-gap: 20px; 
+    row-gap: 30px;
+    margin-left: 5px;
+}
+  
+/*** Sucursal Palermo ***/
+.palermo_ubicacion{
+    grid-area: 1 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.palermo_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.palermo_ubicacion i{
+    margin: 10px 10px 20px 20px;
+} 
+.palermo_ubicacion a{
+    text-decoration: none;
+}
+.palermo_ubicacion a span:hover{
+    color:#B4965A;
+}
+.palermo_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+}
+.palermo1{
+    grid-area: 1 / 2 / span 1 /span 1;
+}
+.palermo2{
+    grid-area: 1 / 3 / span 1 /span 1;
+}
+.palermo3{
+    grid-area: 1 / 4 / span 1 /span 1;
+}
+.palermo1 img, .palermo2 img, .palermo3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}   
+  
+/*** Sucursal Devoto ***/
+.devoto_ubicacion{
+    grid-area: 2 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.devoto_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.devoto_ubicacion i{
+    margin: 10px 10px 20px 20px;
+} 
+.devoto_ubicacion a{
+    text-decoration: none;
+}
+.devoto_ubicacion a span:hover{
+    color:#B4965A;
+}
+.devoto_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6em;
+}
+.devoto1{
+    grid-area: 2 / 2 / span 1 /span 1;
+}
+.devoto2{
+    grid-area: 2 / 3 / span 1 /span 1;
+}
+.devoto3{
+    grid-area: 2 / 4 / span 1 /span 1;
+}
+.devoto1 img, .devoto2 img, .devoto3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+  
+/*** Sucursal Caballito ***/
+.caballito_ubicacion{
+    grid-area: 3 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.caballito_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.caballito_ubicacion i{
+    margin:10px 10px 20px 20px;
+} 
+.caballito_ubicacion a{
+    text-decoration: none;
+}
+.caballito_ubicacion a span:hover{
+    color:#B4965A;
+}
+.caballito_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-decoration: none;
+}
+.caballito1{
+    grid-area: 3 / 2 / span 1 /span 1;
+}
+.caballito2{
+    grid-area: 3 / 3 / span 1 /span 1;
+}
+.caballito3{
+    grid-area: 3 / 4 / span 1 /span 1;
+}
+.caballito1 img, .caballito2 img, .caballito3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}   
+
+  
+/*** Mapas Ubicacion ***/
+.container_maps{
+    display: flex;
+    justify-content: center;
+    margin:0 30px 30px 30px;
+}
+.sucursales_mapas{
+    background: black;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+} 
+.sucursales_mapas h2{
+    color: white;
+    padding:20px 0 10px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.sucursales_mapas ul{
+    list-style: none;
+}
+.sucursales_mapas li{
+    margin: 5px;
+}
+.sucursales_mapas a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Amatic SC', cursive;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+.sucursales_mapas a:hover{
+    color:#B4965A;
+    font-size: 1.5em;
+}
+.sucursales_mapas img{
+    margin-top: 30px;
+}
+.container_maps iframe{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+  
+
+/******** MQuery MAIN **********/
+@media all and (max-width: 1200px) {
+    .palermo_ubicacion span{
+        font-size: 1.5em; }
+     
+    .devoto_ubicacion i{
+        margin: 10px 10px 20px 20px;
+    } 
+    .devoto_ubicacion span{
+        font-size: 1.2em;
+    }
+
+    .caballito_ubicacion h2{
+        padding: 50px 30px 30px 25px;
+    }
+    .caballito_ubicacion i{
+            margin:10px 10px 20px 20px;
+    } 
+    .caballito_ubicacion span{
+        font-size: 1.6em;
+    }
+    .container_maps{
+        display: flex;
+        justify-content: flex-start;
+        margin:0 30px 30px 20px;
+    }
+    .sucursales_mapas{
+        background: black;
+        border-radius: 8px;
+        width: 300px; 
+        height: 300px;
+    } 
+    .sucursales_mapas h2{
+        color: white;
+        padding:20px 0 10px 30px;
+        font-size: 2.5em;
+        font-family: 'Amatic SC', cursive;
+    }
+    .sucursales_mapas li{
+        margin: 5px;
+    }
+    .sucursales_mapas a{
+        padding-left: 30px;
+        padding-top: 5px;
+        font-size: 1.4em;
+        font-weight: 800;
+    }
+    .sucursales_mapas img{
+        margin-top: 30px;
+        width: 150px;
+    }
+    .container_maps iframe{
+        margin-left: 20px;
+        margin-bottom: 50px;
+        width: 240px;
+    }
+}
+
+@media all and (max-width: 900px) {
+/* Titulo */
+#nuestras_sucursales h1{
+    margin:25px 5px 10px 25px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.8em;
+    font-weight: 600;
+} 
+.container_nuestras_sucursales{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 15% 15% 15% 15% 15% 15%; 
+    justify-content: center;
+    column-gap: 20px; 
+    row-gap: 30px;
+    margin-left: 5px;
+}
+/*** Sucursal Palermo ***/
+.palermo_ubicacion{
+    grid-area: 1 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.palermo_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.palermo_ubicacion i{
+    margin: 10px 10px 20px 20px;
+} 
+.palermo_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+}
+.palermo1{
+    grid-area: 1 / 2 / span 1 /span 1;
+}
+.palermo2{
+    grid-area: 2 / 1 / span 1 /span 1;
+}
+.palermo3{
+    grid-area: 2 / 2 / span 1 /span 1;
+}
+.palermo1 img, .palermo2 img, .palermo3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}   
+
+/*** Sucursal Devoto ***/
+.devoto_ubicacion{
+    grid-area: 3 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.devoto_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.devoto_ubicacion i{
+    margin: 10px 10px 20px 20px;
+} 
+.devoto_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.2em;
+}
+.devoto1{
+    grid-area: 3 / 2 / span 1 /span 1;
+}
+.devoto2{
+    grid-area: 4 / 1 / span 1 /span 1;
+}
+.devoto3{
+    grid-area: 4 / 2 / span 1 /span 1;
+}
+.devoto1 img, .devoto2 img, .devoto3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+  
+/*** Sucursal Caballito ***/
+.caballito_ubicacion{
+    grid-area: 5 / 1 / span 1 /span 1;
+    background: black;
+    border-radius: 8px;
+}
+.caballito_ubicacion h2{
+    color: white;
+    padding: 50px 30px 30px 30px;
+    font-size: 3.4em;
+    font-family: 'Amatic SC', cursive;
+}
+.caballito_ubicacion i{
+    margin:10px 10px 20px 20px;
+} 
+.caballito_ubicacion span{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.3em;
+    text-decoration: none;
+}
+.caballito1{
+    grid-area: 5 / 2 / span 1 /span 1;
+}
+.caballito2{
+    grid-area: 6 / 1 / span 1 /span 1;
+}
+.caballito3{
+    grid-area: 6 / 2 / span 1 /span 1;
+}
+.caballito1 img, .caballito2 img, .caballito3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}   
+
+/*** Mapas Ubicacion ***/
+.container_maps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin:0 5px 30px 15px;
+} 
+.sucursales_mapas{
+    background: black;
+    border-radius: 8px;
+    width: 380px;
+    height: 300px;
+} 
+.sucursales_mapas h2{
+    color: white;
+    padding:20px 0 10px 30px;
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+.sucursales_mapas li{
+    margin: 5px;
+}
+.sucursales_mapas a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Amatic SC', cursive;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+.sucursales_mapas img{
+    margin-top: 30px;
+}
+.container_maps iframe{
+    margin-left: 30px;
+    margin-bottom: 50px;
+    width: 350px; }      
+} 
+
+@media all and (max-width: 480px) {
+/* Titulo */
+#nuestras_sucursales h1{
+    font-size: 2.5em;
+} 
+    
+.palermo_ubicacion h2{
+    font-size: 2.5em;
+}
+.palermo_ubicacion span{
+    font-size: 1.6em;
+}
+    
+/** Sucursal Devoto ***/
+.devoto_ubicacion h2{
+    font-size: 2.5em;
+}
+.devoto_ubicacion span{
+    font-size: 1.2em;
+}
+/*** Sucursal Caballito ***/
+.caballito_ubicacion h2{
+    font-size: 3em;
+}
+.caballito_ubicacion span{
+    font-size: 1.6em;
+}
+    
+/*** Mapas Ubicacion ***/
+.container_maps iframe{
+    margin-left: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    width: 350px; }      
+} 
+    
+@media all and (max-width: 320px) {
+#nuestras_sucursales h1{
+    font-size: 2em;
+} 
+.palermo_ubicacion h2{
+    font-size: 2em;
+    padding: 10px;
+    padding-left: 15px;
+}
+.palermo_ubicacion span{
+    font-size: 0.7em;
+}
+/*** Sucursal Devoto ***/
+.devoto_ubicacion h2{
+    font-size: 2em;
+    padding: 10px;
+    padding-left: 15px;
+}
+.devoto_ubicacion span{
+    font-size: 0.6em;
+}
+/*** Sucursal Caballito ***/
+.caballito_ubicacion h2{
+    font-size: 2em;
+    padding: 10px;
+    padding-left: 15px;
+}
+.caballito_ubicacion span{
+    font-size: 0.8em;
+}
+/*** Mapas Ubicacion ***/
+.container_maps{
+    margin:80px 10px 30px 10px;
+} 
+.container_maps iframe{
+    margin: 20px 5px 40px 10px;
+    width: 280px; }      
+} 
+
+
+
+/************** Footer **********************/
+footer{
+    background-color: black;
+    height: 200px;
+    margin: 5px 5px 10px 5px;
+    padding: 15px;
+    border-radius: 8px;
+  } 
+    
+  /*****Container Footer******/
+  .container_footer{
+    display: flex;
+    justify-content:space-around;
+    padding: 5px 50px;
+  }
+    
+  /********* Div Lista del Sitio ************/
+  .site_map{
+    background-color: black;
+  }
+  .list_site{
+    margin: 15px 5px 5px 5px;
+    list-style: none;
+  }
+  .list_site li{
+    margin: 10px 10px 10px 0px;
+  }
+  .list_site a{
+    text-decoration: none; 
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+  }
+  .list_site a:hover{
+    color:#B4965A;
+    font-weight: bold;  
+  }
+    
+    
+  /******** Div Seccion Trabajar ************/
+  .trabajar{
+    background-color: black;
+  }
+  /*Texto Trabajar*/
+  .trabajar p{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    margin: 5px 0px;
+  }
+  /*email Trabajar*/
+  .trabajar a{
+    text-decoration: none;
+    font-size: 0.9em;
+    color:#B4965A;
+    padding: 5px 10px 5px 0px;
+  }
+    
+  /********* Div Seccion Contacto ***************/
+  .contacto{
+    background-color: black;
+    color: white; 
+    margin: 0px 0px 0px 0px;
+  }
+  .contacto p{
+    margin: 5px 0px 10px 0px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    color: white;
+  }
+  .contacto a{
+    text-decoration: none;
+    font-size: 0.9em;
+    color:#B4965A;
+    padding: 15px 10px 5px 0px;
+    margin-top: 10px;
+  }
+    
+  /******* Iconos RedesSociales **********/
+  .redes_sociales i{
+    margin: 20px;
+  }
+  .redes_sociales a{
+    text-decoration: none;
+  }
+    
+    
+  /************ @Media Footer *****************/
+  @media all and (max-width: 992px) {
+      .container_footer{
+        justify-content:space-between;}
+      .site_map{
+        margin-right:20px;}
+      .list_site a{  
+        font-size: 1.1em;}
+      .trabajar{
+        margin-right:40px;} 
+      .trabajar p{ 
+        font-size: 1.5em;}
+      .contacto{
+        margin-right:50px;
+        margin-left: 0px;} 
+      .contacto p{
+        font-size: 1.5em;}
+  }
+  @media all and (max-width: 900px) {
+      .container_footer{
+        justify-content:space-evenly;}
+      .site_map{
+        margin-right:20px;}
+      .list_site a{  
+        font-size: 1.1em;}
+      .trabajar{
+        margin-right:40px;} 
+      .trabajar p{ 
+        font-size: 1.4em;}
+      .trabajar a{
+          font-size: 0.8em;}  
+      .contacto{
+        margin-right:50px;
+        margin-left: 0px;} 
+      .contacto p{
+        font-size: 1.4em;}
+      .contacto a{
+        font-size: 0.8em;}  
+      .redes_sociales i{
+        display: block;}
+  } 
+  @media all and (max-width: 768px) {
+      .container_footer{
+        justify-content:center;}
+      .redes_sociales i{
+        width: 10%;}
+      .site_map{
+        margin-right:10px;}
+      .trabajar{
+       margin-right:20px;} 
+      .contacto{
+        margin-right:40px;}
+  } 
+  @media all and (max-width: 680px) {
+      .container_footer{
+        justify-content:center;}
+      .site_map{
+        margin-right:5px;}
+      .list_site a{  
+        font-size: 0.9em;}
+      .trabajar{
+        margin-right:5px;} 
+      .trabajar p{ 
+        font-size: 1.2em;}
+      .trabajar a{
+          font-size: 0.7em;}  
+      .contacto{
+        margin-right:5px;
+        margin-left: 0px;} 
+      .contacto p{
+        font-size: 1.2em;}
+      .contacto a{
+        font-size: 0.7em;}  
+      .redes_sociales i{
+        display: block;}
+  } 
+  @media all and (max-width: 600px) {
+      .container_footer{
+        justify-content:center;}
+      .site_map{
+        margin-right:5px;}
+      .list_site a{  
+        font-size: 1em;}
+      .trabajar{
+        margin-right:5px;} 
+      .trabajar p{ 
+        font-size: 1em;}
+      .trabajar a{
+          font-size: 0.6em;}  
+      .contacto{
+        margin-right:5px;
+        margin-left: 0px;} 
+      .contacto p{
+        font-size: 1em;}
+      .contacto a{
+        font-size: 0.6em;}  
+      .redes_sociales i{
+        display: block;}
+  } 
+  @media all and (max-width: 320px) {
+      .list_site a{  
+        font-size: 0.8em; }
+      .trabajar p{ 
+        font-size: 0.7em;} 
+      .trabajar a{
+          font-size: 0.6em;}  
+      .contacto p{
+        font-size: 0.7em;} 
+      .contacto a{
+        font-size: 0.6em;}  
+  } 
+    
+    
+    
+    
+  
